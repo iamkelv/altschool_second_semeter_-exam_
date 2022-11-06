@@ -1,0 +1,225 @@
+.container {
+    display: flex;
+    width: 100vw;
+    margin: 0 auto;
+    max-width: 100%;
+    min-width: 420px;
+    font-weight: 700;
+    position: relative;
+    background: rgb(225, 229, 243);
+    transition: all 300ms ease-in-out;
+}
+
+.side__container {
+    transition: all 300ms ease-in-out;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background: rgb(5, 18, 61);
+    /* overflow-y: scroll; */
+    max-height: auto;
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+    max-width: 250px;
+    color: rgb(182, 180, 180);
+
+}
+
+.side__hide_nav {
+    display: none;
+}
+
+.menu__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.menu__wrapper div {
+    display: flex;
+    align-items: center;
+}
+
+.menu__wrapper div ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.menu__wrapper div ul li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.menu__wrapper div ul li span {
+    align-items: center;
+    display: flex;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.active div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.active div ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.active div ul li {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+
+.active div ul li span img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 20px;
+    border-radius: 50%;
+}
+
+.active__head {
+    margin: 1rem auto;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 17px;
+    font-weight: 800;
+    padding: 1rem 0;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hideIcon {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 1rem;
+    left: 12rem;
+    z-index: 2;
+    justify-content: center;
+}
+
+.hideIcon span {
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+
+}
+
+.show {
+    display: flex;
+    flex: 0.0;
+    left: -110%;
+}
+
+.body__container {
+    display: flex;
+    flex: 8;
+    width: 100%;
+    position: relative;
+    width: inherit;
+    flex-direction: column;
+}
+
+.body__nav {
+    display: flex;
+    min-height: 50px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    align-items: center;
+    padding: 1rem;
+    width: auto;
+    min-width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.body__nav .left {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.body__nav div {
+    display: flex;
+
+}
+
+.body__nav div ul {
+    display: flex;
+    list-style: none;
+    gap: 1.3rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.body__nav div ul a:hover {
+    opacity: 0.6;
+}
+
+.body__nav .right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.body__nav .right div div {
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+.body__nav .right div div span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.body__nav .right div div span input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.notification {
+    display: flex;
+    gap: 1rem;
+}
+
+.hide__profile {
+    display: none;
+}

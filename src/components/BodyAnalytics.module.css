@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    width: auto;
+    max-width: 100%;
+    background: rgb(225, 229, 243);
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+    position: relative;
+}
+
+.container .left__container {
+    display: flex;
+    flex: 6;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+    /* align-items: center; */
+    position: relative;
+
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.tabs {
+    display: flex;
+
+}
+
+.tabs ul {
+    width: 100%;
+
+    display: flex;
+    list-style: none;
+    /* gap: 5px; */
+}
+
+.tabs ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.tab__color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+
+}
+
+.calender {
+    align-items: center;
+    display: flex;
+
+    justify-content: flex-end !important;
+}
+
+.calender input {
+    display: flex;
+    border: 1px solid gainsboro;
+    padding: 5px;
+    border-radius: 5px;
+    /* align-items: center; */
+}
+
+.container .left__container div {
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left__container div div {}
+
+.container .right__container {
+    display: flex;
+    flex: 3;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    padding: 10px;
+}
