@@ -1,30 +1,32 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Navigate, Route, Routes } from "react-router-dom";
-
+import classes from "./App.module.css";
 import { Dashboard } from "./pages/admin/Dashboard";
 import { AuthPage } from "./pages/AuthPage";
-import { ContactUs } from "./pages/ContactUs";
-import { GalleryPage } from "./pages/Gallery";
 import { HomePage } from "./pages/HomePage";
+import { PageNotFound } from "./pages/PageNoteFound";
 import { SearchUsers } from "./pages/SearchUsers";
 import { TestBound } from "./pages/TestBound";
 import { UserDetailPage } from "./pages/UserDetailPage";
-
+import { uiSliceAction } from "./store/slices/ui-slice";
+import { Helmet } from "react-helmet";
 function App() {
   const auth = useSelector((state) => state.auth);
-
+  const dispatch = useDispatch();
   return (
-    <>
+    <div
+      className={classes.container}
+      onClick={() => dispatch(uiSliceAction.menu(false))}
+    >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Altschool Exam</title>
+        <meta name="description" content="Welcome to altschool Student Exam " />
+      </Helmet>
       <Routes>
         <Route path="/" element={<Navigate to="home" replace={true} />}></Route>
-        <Route path="home/*" element={<HomePage />}>
-          <Route path="kelvin" element={<h1>Hello</h1>} />
-        </Route>
-        <Route path="/gallery/*" element={<GalleryPage />}>
-          <Route path="image/:id" element={<UserDetailPage />} />
-        </Route>
+        <Route path="home/" element={<HomePage />} />
         <Route path="user/:id" element={<UserDetailPage />} />
-        <Route path="service" element={<h1>Our Services</h1>} />
         <Route path="/admin" element={<Dashboard />} />
 
         <Route path="search" element={<SearchUsers />} />
@@ -36,11 +38,10 @@ function App() {
             element={<Navigate to="/admin" replace={true} />}
           />
         )}
-
-        <Route path="contact" element={<ContactUs />} />
-        <Route path="*" element={<h1>Page not found</h1>} />
+        <Route path="test" element={<TestBound />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

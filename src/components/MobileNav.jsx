@@ -1,21 +1,28 @@
 import { Link } from "react-router-dom";
-import classes from "./Navbar.module.css";
-import logo from "../assets/img/logo.jpg";
-import { GiHamburgerMenu } from "react-icons/gi";
+import classes from "./MobileNav.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { MobileNav } from "./MobileNav";
+import { AiOutlineClose } from "react-icons/ai";
 import { uiSliceAction } from "../store/slices/ui-slice";
-export const Navbar = () => {
+
+export const MobileNav = () => {
+  const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
   const { showMenu } = useSelector((state) => state.ui);
-  const dispatch = useDispatch();
+
   return (
-    <>
-      <div className={classes.container}>
-        <div className={classes.logo__container}>
-          <Link to="/">
-            <img src={logo} alt="" />
-          </Link>
+    <div className={classes.main}>
+      <div
+        className={
+          !showMenu
+            ? `${classes.container}`
+            : `${classes.container} ${classes.show}`
+        }
+      >
+        <div className={classes.close}>
+          <AiOutlineClose
+            size={25}
+            onClick={() => dispatch(uiSliceAction.menu(false))}
+          />
         </div>
         <div className={classes.menu__container}>
           <div className={classes.menu__wrapper}>
@@ -26,12 +33,7 @@ export const Navbar = () => {
             </ul>
           </div>
         </div>
-        <div className={classes.Hamburger}>
-          <GiHamburgerMenu
-            size={30}
-            onClick={() => dispatch(uiSliceAction.menu(true))}
-          />{" "}
-        </div>
+
         <div className={classes.left__container}>
           <ul>
             {!auth.login && (
@@ -45,7 +47,6 @@ export const Navbar = () => {
           </ul>
         </div>
       </div>
-      <MobileNav />
-    </>
+    </div>
   );
 };

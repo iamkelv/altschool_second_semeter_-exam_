@@ -14,6 +14,7 @@
 
 .left__container,
 .right__container {
+
     padding: 1rem 1rem;
 }
 
@@ -33,6 +34,20 @@
     align-items: center;
     margin-bottom: 2rem;
     margin-top: 1rem;
+}
+
+
+.login_text {
+    font-size: 12px;
+}
+
+.keep__me input {
+    width: 3px;
+}
+
+.with_email {
+    text-align: center;
+    font-size: 10px;
 }
 
 .logo__container img {
@@ -213,5 +228,193 @@
     margin: 0 auto;
     max-width: 100%;
     transform: rotateX(30%);
+
+}
+
+/* 
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .container {
+        transform: translateX(100%);
+        background: green;
+    }
+
+    .menu__container,
+    .left__container {
+        display: none;
+    }
+
+    .Hamburger {
+        display: block;
+    }
+}
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+        margin: 5px auto;
+
+
+    }
+
+    .left__container {
+        flex: 1;
+        padding: 10px 5px;
+    }
+
+    .body__title span {
+        font-size: 12px;
+    }
+
+    .signin_google {
+        font-size: 12px;
+    }
+
+    .with_google {
+
+        font-size: 12px;
+    }
+
+    .logo__container img {
+        max-width: 50px;
+    }
+
+    .right__container {
+        display: none;
+        flex: none;
+    }
+
+    .keep__me {
+        font-size: 10px;
+    }
+
+    .forgot {
+        display: flex;
+        font-size: 10px;
+    }
+
+    .button {
+        margin-top: -10px !important;
+    }
+
+    .no_accout {
+        margin-top: -12px !important;
+        font-size: 10px;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .container {
+        width: 90%;
+        margin: 5px auto;
+
+
+    }
+
+    .left__container {
+        flex: 1;
+        padding: 10px 5px;
+    }
+
+    .body__title span {
+        font-size: 12px;
+    }
+
+    .signin_google {
+        font-size: 12px;
+    }
+
+    .with_google {
+
+        font-size: 12px;
+    }
+
+    .logo__container img {
+        max-width: 50px;
+    }
+
+    .right__container {
+        display: none;
+        flex: none;
+    }
+
+    .keep__me {
+        font-size: 10px;
+    }
+
+    .forgot {
+        display: flex;
+        font-size: 10px;
+    }
+
+    .button {
+        margin-top: -10px !important;
+    }
+
+    .no_accout {
+        margin-top: -12px !important;
+        font-size: 10px;
+    }
+
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .container {
+        width: 90%;
+        margin: 5px auto;
+
+
+    }
+
+    .left__container {
+        flex: 1;
+        padding: 10px 5px;
+    }
+
+    .body__title span {
+        font-size: 12px;
+    }
+
+    .signin_google {
+        font-size: 12px;
+    }
+
+    .with_google {
+
+        font-size: 12px;
+    }
+
+    .logo__container img {
+        max-width: 50px;
+    }
+
+    .right__container {
+        display: none;
+        flex: none;
+    }
+
+    .keep__me {
+        font-size: 10px;
+    }
+
+    .forgot {
+        display: flex;
+        font-size: 10px;
+    }
+
+    .button {
+        margin-top: -10px !important;
+    }
+
+    .no_accout {
+        margin-top: -12px !important;
+        font-size: 10px;
+    }
 
 }

@@ -160,18 +160,22 @@ export const AuthPage = () => {
                 {!loginSwap && (
                   <span className={classes.google}>
                     <span>
-                      <FcGoogle />
+                      <FcGoogle size={15} />
                     </span>
 
-                    <span>Log in with Google</span>
+                    <span className={classes.with_google}>
+                      Log in with Google
+                    </span>
                   </span>
                 )}
                 {loginSwap && (
                   <span className={classes.google}>
                     <span>
-                      <FcGoogle />
+                      <FcGoogle size={15} />
                     </span>{" "}
-                    <span>Sign in with Google</span>
+                    <span className={classes.signin_google}>
+                      Sign in with Google
+                    </span>
                   </span>
                 )}
 
@@ -204,13 +208,27 @@ export const AuthPage = () => {
                         justifyContent: "space-between",
                       }}
                     >
-                      <span>
-                        <input type="checkbox" style={{ width: "auto" }} />
-                        Keep me logged in{" "}
+                      <span
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                        }}
+                      >
+                        <input
+                          type="checkbox"
+                          style={{ width: "auto", boxShadow: "none" }}
+                        />
+                        <span className={classes.keep__me}>
+                          Keep me logged in
+                        </span>
                       </span>
                     </span>
                     <span>
-                      <Link to="" onClick={() => setLogin((prev) => !prev)}>
+                      <Link
+                        to=""
+                        className={classes.forgot}
+                        onClick={() => setLogin((prev) => !prev)}
+                      >
                         {" "}
                         Forgot Password?
                       </Link>

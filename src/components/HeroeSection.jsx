@@ -14,9 +14,11 @@ export const HeroSection = () => {
         <span className={classes.left_title}>
           Manage your Team's Task easily remotely
         </span>
-        <span className={classes.left_button}>
-          <Link to="/user">
-            <button>Get Started</button>
+        <span style={{ marginTop: "1rem" }} className={classes.left_button}>
+          <Link to="/auth">
+            <button style={{ display: "flex", padding: "20px 30px" }}>
+              Get Started
+            </button>
           </Link>
         </span>
         <span className={classes.left_fetured}>

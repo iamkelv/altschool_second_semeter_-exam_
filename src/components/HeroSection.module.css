@@ -63,6 +63,12 @@
     background: rgb(8, 160, 247);
     color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    transition: all 300ms ease;
+
+}
+
+.left_button button:hover {
+    background: black;
 }
 
 .right .image__container {
