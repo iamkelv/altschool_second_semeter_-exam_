@@ -25,7 +25,7 @@ function App() {
           name="description"
           content="Welcome to altschool Student Exam Let's invest in your Future. Learn highly sought after tech skills without hassle. A program designed to arm you with the skills and knowledge required to boldly launch your tech careeR"
         />
-        <link rel="canonical" href="/" />
+        <link rel="canonical" href="/home" />
         <meta
           name="keywords"
           content="Kelvin, Altschool, exam, google, Nkubuin"
