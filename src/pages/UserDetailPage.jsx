@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import classes from "./UserDetailPage.module.css";
 
 import { useSelector } from "react-redux";
+import { Helmet } from "react-helmet";
 
 export const UserDetailPage = () => {
   const { getUsers } = useSelector((state) => state.users);
@@ -16,6 +17,19 @@ export const UserDetailPage = () => {
 
   return (
     <div className={classes.container}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{userContent.name.first}</title>
+        <meta
+          name="description"
+          content="Welcome to altschool Student Exam Let's invest in your Future. Learn highly sought after tech skills without hassle. A program designed to arm you with the skills and knowledge required to boldly launch your tech careeR"
+        />
+        <link rel="canonical" href="/" />
+        <meta
+          name="keywords"
+          content="Kelvin, Altschool, exam, google, Nkubuin"
+        />
+      </Helmet>
       <div className={classes.left__container}>
         <span className={classes.image_container}>
           <img src={userContent.picture.large} alt="" />

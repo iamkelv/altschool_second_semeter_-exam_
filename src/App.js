@@ -21,7 +21,15 @@ function App() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Altschool Exam</title>
-        <meta name="description" content="Welcome to altschool Student Exam " />
+        <meta
+          name="description"
+          content="Welcome to altschool Student Exam Let's invest in your Future. Learn highly sought after tech skills without hassle. A program designed to arm you with the skills and knowledge required to boldly launch your tech careeR"
+        />
+        <link rel="canonical" href="/" />
+        <meta
+          name="keywords"
+          content="Kelvin, Altschool, exam, google, Nkubuin"
+        />
       </Helmet>
       <Routes>
         <Route path="/" element={<Navigate to="home" replace={true} />}></Route>

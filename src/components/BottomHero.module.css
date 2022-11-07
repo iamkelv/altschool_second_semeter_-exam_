@@ -88,4 +88,8 @@
 
 }
 
-@media (min-width: 320px) and (max-width: 480px) {}
+@media (min-width: 320px) and (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+}

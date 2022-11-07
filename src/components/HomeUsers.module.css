@@ -123,11 +123,6 @@
 @media (min-width: 768px) and (max-width: 1024px) {}
 
 @media (min-width: 481px) and (max-width: 767px) {
-    /* .recent__users_head {
-        background: red;
-        display: flex !important;
-        flex-direction: column !important;
-    } */
 
     .email {
         display: none !important;
@@ -140,15 +135,20 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+    .container {
+        padding: 0;
+    }
 
     .email__head,
     .cell__head {
-        display: none;
+        display: none !important;
     }
 
     .email,
+    .gender,
+    .gender__head,
     .cell {
-        display: none;
+        display: none !important;
 
     }
 }

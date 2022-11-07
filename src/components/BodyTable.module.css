@@ -173,4 +173,21 @@
 
 }
 
-@media (min-width: 320px) and (max-width: 480px) {}
+@media (min-width: 320px) and (max-width: 480px) {
+    .container {
+        padding: 0;
+    }
+
+    .email__head,
+    .cell__head {
+        display: none !important;
+    }
+
+    .email,
+    .gender,
+    .gender__head,
+    .cell {
+        display: none !important;
+
+    }
+}

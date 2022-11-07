@@ -1,0 +1,5 @@
+https://altschool-second-semeter-exam.vercel.app
+https://altschool-second-semeter-exam.vercel.app/home
+https://altschool-second-semeter-exam.vercel.app/auth
+https://altschool-second-semeter-exam.vercel.app/admin
+https://altschool-second-semeter-exam.vercel.app/user

@@ -49,9 +49,7 @@ export const HomeUsers = () => {
   };
 
   useEffect(() => {
-    console.log(isLoading);
     dispatch(userSliceAction.addUser(users));
-    // console.log(getUsers);
     setUsers(data);
   }, [dispatch, data, users, isLoading]);
 
@@ -100,7 +98,7 @@ export const HomeUsers = () => {
               <td sty>Name</td>
               <td className={classes.email__head}>Email Address</td>
               <td className={classes.cell__head}>Phone Number</td>
-              <td>Gender</td>
+              <td className={classes.gender__head}>Gender</td>
               <td>Photo</td>
               <td>Action</td>
             </th>

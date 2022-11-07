@@ -13,6 +13,7 @@ import {
   BiBuildings,
   BiTask,
   BiBarChartSquare,
+  BiMenu,
 } from "react-icons/bi";
 import {
   BsFillBagCheckFill,
@@ -29,6 +30,7 @@ import { BodyAnalytics } from "../../components/BodyAnalytics";
 import { BodyTable } from "../../components/BodyTable";
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "../../store/slices/auth-slice";
+import { Helmet } from "react-helmet";
 
 export const Dashboard = () => {
   const [showSideBar, setShowSideBar] = useState(true);
@@ -42,6 +44,19 @@ export const Dashboard = () => {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Dashboard</title>
+        <meta
+          name="description"
+          content="Welcome to altschool Student Exam Let's invest in your Future. Learn highly sought after tech skills without hassle. A program designed to arm you with the skills and knowledge required to boldly launch your tech careeR"
+        />
+        <link rel="canonical" href="/" />
+        <meta
+          name="keywords"
+          content="Kelvin, Altschool, exam, google, Nkubuin"
+        />
+      </Helmet>
       {auth.login && (
         <div className={classes.container}>
           <div
@@ -289,17 +304,35 @@ export const Dashboard = () => {
                 </ul>
               </div>
               <div className={classes.right}>
-                <div>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <span
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      marginRight: "5px",
+                    }}
+                  >
+                    <BiMenu className={classes.harmbuger} size={20} />
+                  </span>
                   <div>
                     <span>
                       <AiOutlineSearch size={20} />
                     </span>
+
                     <span>
                       <input type="text" placeholder="Search user" />
                     </span>
                   </div>
                 </div>
-                <div style={{ display: "flex", alignItems: "center" }}>
+                <div
+                  className={classes.online}
+                  style={{ display: "flex", alignItems: "center" }}
+                >
                   <span
                     style={{
                       display: "flex",

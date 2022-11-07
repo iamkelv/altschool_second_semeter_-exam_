@@ -13,6 +13,7 @@ import { Pagination } from "../components/Pagination";
 import useHttp from "../hooks/use-http";
 import { userSliceAction } from "../store/slices/user-slice";
 import { TableIsLoading } from "../components/ui/TableIloading";
+import { Helmet } from "react-helmet";
 
 export const TestBound = () => {
   const { isLoading, error, data } = useHttp(
@@ -59,6 +60,19 @@ export const TestBound = () => {
 
   return (
     <div className={classes.container}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Test bound</title>
+        <meta
+          name="description"
+          content="Welcome to altschool Student Exam Let's invest in your Future. Learn highly sought after tech skills without hassle. A program designed to arm you with the skills and knowledge required to boldly launch your tech careeR"
+        />
+        <link rel="canonical" href="/" />
+        <meta
+          name="keywords"
+          content="Kelvin, Altschool, exam, google, Nkubuin"
+        />
+      </Helmet>
       <div className={classes.recent__users_head}>
         <span>Our Recent Students</span>
         <span

@@ -117,9 +117,9 @@ export const BodyTable = () => {
                 >
                   <tr className={classes.row}>
                     <td>{`${user.name.first} ${user.name.last}`}</td>
-                    <td>{user.email}</td>
-                    <td>{user.cell}</td>
-                    <td>{user.gender}</td>
+                    <td className={classes.email}>{user.email}</td>
+                    <td className={classes.cell}>{user.cell}</td>
+                    <td className={classes.gender}>{user.gender}</td>
                     <td>
                       <img
                         style={{

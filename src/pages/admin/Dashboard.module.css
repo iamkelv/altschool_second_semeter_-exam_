@@ -223,3 +223,61 @@
 .hide__profile {
     display: none;
 }
+
+.harmbuger {
+    display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .left {
+        display: none !important;
+    }
+
+    /* .online {
+        display: none !important;
+    } */
+
+    .harmbuger {
+        display: flex;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .left {
+        display: none !important;
+    }
+
+    .online {
+        display: none !important;
+    }
+
+    .harmbuger {
+        display: flex;
+    }
+
+    .email {
+        display: none !important;
+
+    }
+
+    .email__head {
+        display: none !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+
+
+    .left {
+        display: none !important;
+    }
+
+    .online {
+        display: none !important;
+    }
+
+    .harmbuger {
+        display: flex;
+    }
+}
